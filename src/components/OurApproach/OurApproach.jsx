@@ -56,11 +56,6 @@ const OurApproach = () => {
           <StyledApproach className="flex flex-col md:flex-row m-4 md:m-8">
             <Swiper
               spaceBetween={30}
-              centeredSlides={true}
-              autoplay={{
-                delay: 5000,
-                disableOnInteraction: true,
-              }}
               modules={[Autoplay, Pagination, Navigation]}
               onAutoplayTimeLeft={onAutoplayTimeLeft}
               className="w-full rounded-2xl p-2 scrollbar-hide"
@@ -103,26 +98,11 @@ const OurApproach = () => {
             <div className=" flex flex-col lg:flex-row w-full md:h-full p-2 md:p-4 gap-4 md:gap-6">
               <div className="flex flex-row lg:flex-col gap-10 md:w-full">
                 <div className="border-2 h-48  lg:h-full w-full border-gray-300 rounded-2xl">
-                  <img
-                    src={Transparency}
-                    alt=""
-                    className=""
-                  />
                 </div>
                 <div className="border-2 h-48  lg:h-full w-full border-gray-300 rounded-2xl">
-                  <img
-                    src={Transparency}
-                    alt=""
-                    className=""
-                  />
                 </div>
               </div>
               <div className="border-2 md:h-full w-full h-80 border-gray-300 rounded-2xl">
-                <img
-                  src={Transparency}
-                  alt=""
-                  className=""
-                />
               </div>
             </div>
           </StyledApproach>
