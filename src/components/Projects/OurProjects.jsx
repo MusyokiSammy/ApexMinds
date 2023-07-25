@@ -41,16 +41,19 @@ const OurProjects = () => {
               passion and precision to empower your business for success.
             </p>
 
-            <Link to="/projects" className="p-3 border rounded-md bg-green-500 text-sm">
+            <Link
+              to="/projects"
+              className="p-3 border rounded-md bg-green-500 text-sm"
+            >
               View All Projects ➔
             </Link>
           </div>
-          <div className='grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid p-4 gap-4'>
-            {
-                ProjectsData.map((project) => (
-                    <CardProject project={project}/>
-                ))
-            }
+          <div
+            className='grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid p-4 gap-4'
+          >
+            {ProjectsData.map((project) => (
+                <CardProject project={project} />
+            ))}
           </div>
         </div>
       </section>

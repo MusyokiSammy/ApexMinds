@@ -28,19 +28,32 @@ const CardProject = ({project}) => {
   return (
     <React.Fragment>
       <ProjectCard
-      key={project.id}
-        // className={`${index === 2 ? "flex items-center justify-center" : ""}`}
+        key={project.id}
+        // className={`${project.id === 3 ? "flex items-center justify-center" : ""}`}
       >
-        <img src={Photo} alt="" className='absolute rounded-2xl h-full w-full'/>
-        <TagCard className='relative flex flex-col border-2 top-40 m-10 p-4'>
-          <h1 className='font-semibold flex text-gray-300'>{project.category}</h1>
-          <hr className='w-[20%] h-[5px] text-green-500'/>
-          <h2 className='font-semibold text-2xl text-white'>{project.title}</h2>
-          <Link to='/projects' className='group w-10 h-10 rounded-full  flex items-center justify-center bg-green-500 absolute -right-5' style={{
-            transform: 'translate(0, -50%)',
-            top: '50%',
-          }}>
-            <BsArrowRightShort size={26} className='rotate-45 group-hover:rotate-0 transition-all duration-500 ease-in-out'/>
+        <img
+          src={project.image}
+          alt=""
+          className="absolute rounded-2xl h-full w-full"
+        />
+        <TagCard className="relative flex flex-col border-2 top-40 m-10 p-4">
+          <h1 className="font-semibold flex text-gray-300">
+            {project.category}
+          </h1>
+          <hr className="w-[20%] h-[5px] text-green-500" />
+          <h2 className="font-semibold text-2xl text-white">{project.title}</h2>
+          <Link
+            to="/projects"
+            className="group w-10 h-10 rounded-full  flex items-center justify-center bg-green-500 absolute -right-5"
+            style={{
+              transform: "translate(0, -50%)",
+              top: "50%",
+            }}
+          >
+            <BsArrowRightShort
+              size={26}
+              className="rotate-45 group-hover:rotate-0 transition-all duration-500 ease-in-out"
+            />
           </Link>
         </TagCard>
       </ProjectCard>
