@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 const StyledCard = styled.div`
   position: relative;
+  overflow: hidden;
   border: 1px solid rgba(238, 238, 238);
   border-radius: 16px;
   background: rgba(251, 251, 251, 0.5);
@@ -15,6 +16,7 @@ const StyledCard = styled.div`
   justify-content: center;
   transition: 0.5s ease;
   gap: 1rem;
+  flex-shrink: 0;
 
   &:hover {
     transition: 0.5s ease;
@@ -35,7 +37,7 @@ const Card = ({card}) => {
 
   return (
     <>
-      <StyledCard key={card.id}>
+      <StyledCard>
         <div className="my-4">
           <span>{card.icon}</span>
         </div>
@@ -66,7 +68,7 @@ const Card = ({card}) => {
         </div>
         <ul className="list-disc px-4 marker:text-green-500">
           {card.list.map((item) => {
-            return <li className="font-semibold">{item.text}</li>;
+            return <li key={item.id} className="font-semibold">{item.text}</li>;
           })}
         </ul>
       </StyledCard>

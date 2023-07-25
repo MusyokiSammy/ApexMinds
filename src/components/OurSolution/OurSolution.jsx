@@ -1,5 +1,5 @@
-import React, { useRef } from 'react'
-import Card from './Features/Card';
+import React, { useEffect, useRef } from 'react'
+import Card from './Features/SolutionCard';
 import { VscArrowCircleLeft, VscArrowCircleRight } from "react-icons/vsc";
 import { LuNetwork, LuMonitor } from "react-icons/lu";
 import { FaLaptopCode } from "react-icons/fa";
@@ -100,6 +100,20 @@ const OurSolution = () => {
 
   const sliderRef = useRef(null)
 
+
+  // useEffect(() => {
+  //   const scrollableComponent = sliderRef.current
+  //   scrollableComponent.addEventListener('wheel', (e) => {
+  //     e.preventDefault()
+
+  //     const scrollAmount = e.deltaX
+
+  //     scrollableComponent.scrollLeft -= scrollAmount
+  //     console.log(e)
+  //   })
+
+  // }, [])
+
   const scrollLeft = () => {
     if (sliderRef.current) {
       sliderRef.current.scrollLeft -= sliderRef.current.offsetWidth;
@@ -115,7 +129,7 @@ const OurSolution = () => {
       <section className="relative isolate w-full font-Poppins py-16">
         <div className="mx-auto max-w-[1560px]">
           <div className="relative px-6 flex flex-col justify-center gap-8 items-start">
-            <h1 className="font-bold text-gray-800 text-4xl md:text-6xl capitalize leading-10 tracking-tighter">
+            <h1 className="font-semibold text-gray-800 text-4xl md:text-6xl capitalize leading-10 tracking-tighter">
               Our Solutions
             </h1>
             <p className="sm:text-lg">
@@ -135,16 +149,13 @@ const OurSolution = () => {
 
           <div
           ref={sliderRef}
-            className="flex gap-8 items-center  overflow-x-scroll scroll-smooth
-              scrollbar-hide mx-auto p-4 xl:mt-8"
+            className="flex gap-8 items-center w-full overflow-x-scroll scroll-smooth
+              scrollbar-hide mx-auto p-4 max-w-[1560px] xl:mt-8"
           >
-            {cardsData.map((card) => {
-              return (
-                <div >
-                  <Card card={card}/>
-                </div>
-              );
-            })}
+            {cardsData.map((card) => (
+                  <Card card={card} key={card.id}/>
+              )
+            )}
           </div>
         </div>
       </section>
