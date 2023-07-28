@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import { BsArrowRightShort } from "react-icons/bs";
-import Photo from "../../../Images/Software.jpg"
 import { Link } from 'react-router-dom';
 
 
@@ -10,10 +9,7 @@ const ProjectCard = styled.div`
   width: 100%;
   height: 24rem;
   border-radius: 16px;
-
-  @media max-width(768px) {
-    height: 30rem;
-  }
+  overflow: hidden;
 `
 const TagCard = styled.div`
   background: rgba(50, 50, 50, 0.2);
@@ -27,14 +23,11 @@ const TagCard = styled.div`
 const CardProject = ({project}) => {
   return (
     <React.Fragment>
-      <ProjectCard
-        key={project.id}
-        // className={`${project.id === 3 ? "flex items-center justify-center" : ""}`}
-      >
+      <ProjectCard key={project.id} className="group">
         <img
           src={project.image}
           alt=""
-          className="absolute rounded-2xl h-full w-full"
+          className="absolute rounded-2xl h-full w-full group-hover:scale-125 transition-all duration-[1.5s] ease-in-out over"
         />
         <TagCard className="relative flex flex-col border-2 top-40 m-10 p-4">
           <h1 className="font-semibold flex text-gray-300">
@@ -52,7 +45,7 @@ const CardProject = ({project}) => {
           >
             <BsArrowRightShort
               size={26}
-              className="rotate-45 group-hover:rotate-0 transition-all duration-500 ease-in-out"
+              className="rotate-45 group-hover:rotate-0 transition-all duration-[1.5s] ease-in-out"
             />
           </Link>
         </TagCard>

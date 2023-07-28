@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, {  useRef } from 'react'
 import Card from './Features/SolutionCard';
 import { VscArrowCircleLeft, VscArrowCircleRight } from "react-icons/vsc";
 import { LuNetwork, LuMonitor } from "react-icons/lu";

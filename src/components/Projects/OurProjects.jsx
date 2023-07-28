@@ -1,30 +1,8 @@
 import React from 'react'
 import CardProject from './Features/CardProject';
 import { Link } from 'react-router-dom';
-import styled from 'styled-components';
 import { ProjectsData } from './ProjectsData';
 
-const styledLink = styled.a`
-    transition: anima
-
-  @keyframes circle-in-hesitate {
-    0% {
-      clip-path: circle(0%);
-    }
-    40% {
-      clip-path: circle(40%);
-    }
-    100% {
-      clip-path: circle(125%);
-    }
-  }
-
-  &:hover {
-      animation: 2.5s cubic-bezier(0.25, 1, 0.3, 1) circle-in-hesitate both;
-
-  }
-  
-`;
 
 const OurProjects = () => {
   return (
