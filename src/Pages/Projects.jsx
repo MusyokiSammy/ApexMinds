@@ -1,10 +1,21 @@
-import React, { useRef, useState } from 'react'
+import React, { useState } from 'react'
 import { BsDot } from "react-icons/bs";
 import { ProjectsData } from '../components/Projects/ProjectsData';
 import CardProject from '../components/Projects/Features/CardProject';
 import { LuNetwork, LuMonitor } from "react-icons/lu";
 import { FaLaptopCode } from "react-icons/fa";
 import { SiMaterialdesignicons } from "react-icons/si";
+import styled from 'styled-components';
+import Photo from '../Images/Software.jpg'
+
+const StyledDiv = styled.div`
+  background: rgba(196, 196, 196, 0.31);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.5px);
+  -webkit-backdrop-filter: blur(6.5px);
+  border: 1px solid rgba(196, 196, 196, 0.12);
+`;
 
 const Projects = () => {
   const [selectedButton, setSelectedButton] = useState('All');
@@ -22,22 +33,25 @@ const Projects = () => {
   }
   return (
     <React.Fragment>
-      <section className="relative isolate h-screen w-full pb-16 font-Poppins">
+      <section className="relative isolate h-full w-full pb-16 font-Poppins">
         <div className="mx-auto max-w-[1560px]">
-          <div className="relative px-6">
-            <div className="flex flex-col items-center border gap-8 py-16 rounded-2xl">
-              <h2 className="p-2 border px-4 shadow-xl bg-green-100 font-semibold rounded-md flex items-center gap-4">
-                {" "}
-                <span>
-                  <BsDot />
-                </span>{" "}
-                Projects{" "}
-                <span>
-                  <BsDot />
-                </span>
-              </h2>
+          <div className="relative px-2 sm:px-6 h-screen overflow-y-scroll scrollbar-hide">
+            <div className="relative ">
+              <img src={Photo} alt="" className='w-full h-full object-cover rounded-2xl absolute'/>
+              <StyledDiv className="relative flex flex-col items-center gap-8 py-10 md:py-16">
+                <h2 className=" p-2 border px-4 shadow-xl bg-green-100 font-semibold rounded-md flex items-center gap-4">
+                  {" "}
+                  <span>
+                    <BsDot />
+                  </span>{" "}
+                  Projects{" "}
+                  <span>
+                    <BsDot />
+                  </span>
+                </h2>
 
-              <h1 className="text-6xl font-semibold">Our Projects</h1>
+                <h1 className="text-3xl md:text-6xl font-semibold">Our Projects</h1>
+              </StyledDiv>
             </div>
             <div className="flex items-center justify-center my-6">
               <button
@@ -93,7 +107,7 @@ const Projects = () => {
               </button>
             </div>
 
-            <div className="grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid gap-4 overflow-y-scroll">
+            <div className="grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid gap-4">
               {projects.map((project) => (
                 <CardProject project={project} />
               ))}
