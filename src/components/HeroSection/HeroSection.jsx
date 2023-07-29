@@ -5,7 +5,7 @@ const HeroSection = () => {
   return (
     <React.Fragment>
       <section className="h-[92.4vh] w-full font-Poppins relative isolate bg-hero bg-cover bg-no-repeat bg-center">
-        <div className="absolute bg-black -z-50 w-full h-full opacity-60"></div>
+        <div className="absolute bg-black  w-full h-full opacity-60"></div>
         <div className="mx-auto max-w-[1560px]">
           <div className="relative px-6 flex flex-col justify-center gap-8 items-start h-[92.4vh]">
             <div className="flex text-xl md:text-3xl gap-2 uppercase font-semibold text-gray-50 tracking-wider">
