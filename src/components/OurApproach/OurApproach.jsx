@@ -60,40 +60,7 @@ const OurApproach = () => {
               onAutoplayTimeLeft={onAutoplayTimeLeft}
               className="w-full rounded-2xl p-2 scrollbar-hide"
             >
-              <SwiperSlide className="">
-                <img
-                  src={software}
-                  alt=""
-                  className="object-cover block h-full w-full"
-                />
-              </SwiperSlide>
-              <SwiperSlide className="">
-                <img
-                  src={hero}
-                  alt=""
-                  className="object-cover block h-full w-full"
-                />
-              </SwiperSlide>
-              <SwiperSlide className="">
-                <img
-                  src={Transparency}
-                  alt=""
-                  className="object-cover block h-full w-full"
-                />
-              </SwiperSlide>
-              <SwiperSlide className="">
-                <img
-                  src={software}
-                  alt=""
-                  className="object-cover block h-full w-full"
-                />
-              </SwiperSlide>
-              <div className="autoplay-progress" slot="container-end">
-                <svg viewBox="0 0 48 48" ref={progressCircleRef}>
-                  <circle cx="24" cy="24" r="20"></circle>
-                </svg>
-                <span ref={progressContentRef}></span>
-              </div>
+
             </Swiper>
             <div className=" flex flex-col lg:flex-row w-full md:h-full p-2 md:p-4 gap-4 md:gap-6">
               <div className="flex flex-row lg:flex-col gap-10 md:w-full">
