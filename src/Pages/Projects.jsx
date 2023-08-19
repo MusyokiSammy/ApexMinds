@@ -10,7 +10,7 @@ import Photo from '../Images/Software.jpg'
 
 const StyledDiv = styled.div`
   background: rgba(196, 196, 196, 0.31);
-  border-radius: 16px;
+  border-radius: 4px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(6.5px);
   -webkit-backdrop-filter: blur(6.5px);
@@ -69,7 +69,7 @@ const Projects = () => {
                 className={`p-2 border rounded-md px-4 mx-2 ${
                   selectedButton === "Software Development"
                     ? "bg-green-500"
-                    : "text-green-500"
+                    : ""
                 }`}
               >
                 <FaLaptopCode className='flex md:hidden h-6 w-6' />
@@ -79,7 +79,7 @@ const Projects = () => {
                 onClick={() => handleButtonClick("UI/UX Design")}
                 type="button"
                 className={`p-2 border rounded-md px-4 mx-2 ${
-                  selectedButton === "UI/UX Design" ? "bg-green-500" : "text-green-500"
+                  selectedButton === "UI/UX Design" ? "bg-green-500" : ""
                 }`}
               >
                 <LuMonitor className='flex md:hidden h-6 w-6' />
@@ -89,7 +89,7 @@ const Projects = () => {
                 onClick={() => handleButtonClick("Graphic Design")}
                 type="button"
                 className={`p-2 border rounded-md px-4 mx-2 ${
-                  selectedButton === "Graphic Design" ? "bg-green-500" : "text-green-500"
+                  selectedButton === "Graphic Design" ? "bg-green-500" : ""
                 }`}
               >
                 <SiMaterialdesignicons className='flex md:hidden h-6 w-6' />
@@ -98,8 +98,8 @@ const Projects = () => {
               <button
                 onClick={() => handleButtonClick("Networking")}
                 type="button"
-                className={`p-2 border rounded-md px-4 mx-2 ${
-                  selectedButton === "Networking" ? "bg-green-500" : "text-green-500"
+                className={`p-2 border rounded-md px-4 mx-2 transition-transform duration-700 ease-in-out ${
+                  selectedButton === "Networking" ? "bg-green-500" : ""
                 }`}
               >
                 <LuNetwork className='flex md:hidden h-6 w-6' />
@@ -107,7 +107,7 @@ const Projects = () => {
               </button>
             </div>
 
-            <div className="grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid gap-4">
+            <div className="grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid gap-4 ">
               {projects.map((project) => (
                 <CardProject project={project} />
               ))}

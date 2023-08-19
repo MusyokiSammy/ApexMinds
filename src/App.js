@@ -3,6 +3,7 @@ import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } 
 import BaseLayout from "./Layouts/BaseLayout";
 import Home from "./Pages/Home";
 import Projects from "./Pages/Projects";
+import TeamPage from "./Pages/TeamPage";
 function App() {
 
   const router = createBrowserRouter(
@@ -10,6 +11,7 @@ function App() {
       <Route path="/" element={<BaseLayout/>}>
         <Route index element={<Home/>}/>
         <Route path="/projects" element={<Projects/>}/>
+        <Route path="/team" element={<TeamPage/>}/>
       </Route>
     )
   )
