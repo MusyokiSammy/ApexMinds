@@ -1,6 +1,3 @@
-import Webdev from '../../Images/webdev.jpg'
-import Network from '../../Images/networking.jpg'
-import Uiux from '../../Images/uiux.jpg'
 
 export const ProjectsData = [
   {

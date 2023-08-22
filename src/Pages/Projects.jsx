@@ -6,7 +6,6 @@ import { LuNetwork, LuMonitor } from "react-icons/lu";
 import { FaLaptopCode } from "react-icons/fa";
 import { SiMaterialdesignicons } from "react-icons/si";
 import styled from 'styled-components';
-import Photo from '../Images/Software.jpg'
 
 const StyledDiv = styled.div`
   background: rgba(196, 196, 196, 0.31);
@@ -37,7 +36,11 @@ const Projects = () => {
         <div className="mx-auto max-w-[1560px]">
           <div className="relative px-2 sm:px-6 h-screen overflow-y-scroll scrollbar-hide">
             <div className="relative ">
-              <img src={Photo} alt="" className='w-full h-full object-cover rounded-2xl absolute'/>
+              <img
+                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHNvZnR3YXJlJTIwZGV2ZWxvcG1lbnR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
+                alt="Projects"
+                className="w-full h-full object-cover rounded-2xl absolute"
+              />
               <StyledDiv className="relative flex flex-col items-center gap-8 py-10 md:py-16">
                 <h2 className=" p-2 border px-4 shadow-xl bg-green-100 font-semibold rounded-md flex items-center gap-4">
                   {" "}
@@ -50,7 +53,9 @@ const Projects = () => {
                   </span>
                 </h2>
 
-                <h1 className="text-3xl md:text-6xl font-semibold">Our Projects</h1>
+                <h1 className="text-3xl md:text-6xl font-semibold">
+                  Our Projects
+                </h1>
               </StyledDiv>
             </div>
             <div className="flex items-center justify-center my-6">
@@ -72,8 +77,8 @@ const Projects = () => {
                     : ""
                 }`}
               >
-                <FaLaptopCode className='flex md:hidden h-6 w-6' />
-                <span className='hidden md:flex'>Software Development</span>
+                <FaLaptopCode className="flex md:hidden h-6 w-6" />
+                <span className="hidden md:flex">Software Development</span>
               </button>
               <button
                 onClick={() => handleButtonClick("UI/UX Design")}
@@ -82,8 +87,8 @@ const Projects = () => {
                   selectedButton === "UI/UX Design" ? "bg-green-500" : ""
                 }`}
               >
-                <LuMonitor className='flex md:hidden h-6 w-6' />
-                <span className='hidden md:flex'>UI/UX Designs</span>
+                <LuMonitor className="flex md:hidden h-6 w-6" />
+                <span className="hidden md:flex">UI/UX Designs</span>
               </button>
               <button
                 onClick={() => handleButtonClick("Graphic Design")}
@@ -92,8 +97,8 @@ const Projects = () => {
                   selectedButton === "Graphic Design" ? "bg-green-500" : ""
                 }`}
               >
-                <SiMaterialdesignicons className='flex md:hidden h-6 w-6' />
-                <span className='hidden md:flex'>Graphic Designs</span> 
+                <SiMaterialdesignicons className="flex md:hidden h-6 w-6" />
+                <span className="hidden md:flex">Graphic Designs</span>
               </button>
               <button
                 onClick={() => handleButtonClick("Networking")}
@@ -102,8 +107,8 @@ const Projects = () => {
                   selectedButton === "Networking" ? "bg-green-500" : ""
                 }`}
               >
-                <LuNetwork className='flex md:hidden h-6 w-6' />
-                <span className='hidden md:flex'>Networking</span> 
+                <LuNetwork className="flex md:hidden h-6 w-6" />
+                <span className="hidden md:flex">Networking</span>
               </button>
             </div>
 

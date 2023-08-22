@@ -6,6 +6,7 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "atropos": "^2.0.2",
     "framer-motion": "^10.12.22",
     "lord-icon-element": "^4.1.1",
     "lottie-web": "^5.12.2",

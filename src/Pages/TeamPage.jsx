@@ -1,9 +1,10 @@
 import React from 'react'
 import styled from "styled-components";
 import { BsDot } from 'react-icons/bs';
+import TeamCard from '../components/Team/TeamCard';
 
 const StyledDiv = styled.div`
-  background: rgba(196, 196, 196, 0.31);
+  background: rgba(100, 100, 100, 0.31);
   border-radius: 4px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(6.5px);
@@ -16,7 +17,7 @@ const TeamPage = () => {
     <React.Fragment>
       <section className="relative isolate h-full w-full pb-16 font-Poppins">
         <div className="mx-auto max-w-[1560px]">
-          <div className="relative px-2 sm:px-6 h-screen overflow-y-scroll scrollbar-hide">
+          <div className="relative px-2 sm:px-6 ">
             <div className="relative ">
               <img
                 src="https://images.unsplash.com/photo-1563461660947-507ef49e9c47?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzJ8fHRlYW18ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
@@ -34,14 +35,13 @@ const TeamPage = () => {
                     <BsDot />
                   </span>
                 </h2>
-
                 <h1 className="text-3xl md:text-6xl font-semibold">Our Team</h1>
               </StyledDiv>
             </div>
 
-            <div className="float-left flex items-center justify-between mt-10">
+            <div className="flex flex-col lg:flex-row items-center justify-between mt-10">
                 <div className='w-full'>
-                    <p className='text-center p-32 leading-8 mx-auto drop-shadow-xl filter'>
+                    <p className='text-center p-2 xl:p-32 leading-8 mx-auto drop-shadow-xl filter'>
                         Welcome to our talented team of software professionals at
                         ApexMinds. We are a passionate and diverse group of individuals
                         united by our shared love for innovation and technology. With
@@ -61,6 +61,10 @@ const TeamPage = () => {
                     className='w-full h-full object-cover object-center hover:scale-110 transition-all duration-700 ease-in-out'
                 />
               </div>
+            </div>
+
+            <div>
+              <TeamCard />
             </div>
           </div>
         </div>
