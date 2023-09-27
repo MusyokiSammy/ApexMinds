@@ -4,6 +4,7 @@ import BaseLayout from "./Layouts/BaseLayout";
 import Home from "./Pages/Home";
 import Projects from "./Pages/Projects";
 import TeamPage from "./Pages/TeamPage";
+import Contacts from "./Pages/Contacts";
 function App() {
 
   const router = createBrowserRouter(
@@ -12,6 +13,7 @@ function App() {
         <Route index element={<Home/>}/>
         <Route path="/projects" element={<Projects/>}/>
         <Route path="/team" element={<TeamPage/>}/>
+        <Route path="/contact-us" element={<Contacts/>}/>
       </Route>
     )
   )
